@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Sheet Metal Enclosures, Boxes, Brackets, Racks | Topwell Precision</title>
+<style>
+  :root{--navy:#12263F;--orange:#C2410C;--steel:#3A6EA5;--bg:#F3F5F7;--ink:#1F2933;--line:#D9DEE3}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter','Segoe UI',Arial,sans-serif}
+  body{color:var(--ink);background:#fff;font-size:16px;line-height:1.6}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+  .topbar{background:var(--navy);color:#B7C4D4;font-size:13.5px;padding:9px 0}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .topbar b{color:#fff;font-weight:600}
+
+  header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .head{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .logo-mark{width:38px;height:38px;background:var(--navy);border-radius:6px;position:relative}
+  .logo-mark::after{content:"";position:absolute;inset:8px;border:2.5px solid var(--orange);border-top:none;border-right:none;border-radius:2px}
+  .logo-txt b{font-size:18px;letter-spacing:.3px;display:block;line-height:1.15;color:var(--navy);font-weight:700}
+  .logo-txt small{color:#7A8794;font-size:10.5px;letter-spacing:1.8px;font-weight:600}
+
+  nav{display:flex;align-items:center;gap:30px}
+  nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+  nav a:hover{color:var(--steel)}
+  .btn-quote{background:var(--orange);color:#fff;border:none;padding:12px 26px;font-weight:700;font-size:15px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn-quote:hover{background:#9A3409}
+  .menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--navy)}
+
+  .page-head{background:var(--navy);color:#fff;padding:56px 0;text-align:center}
+  .page-head h1{font-size:34px;font-weight:700}
+  .page-head p{color:#9FB0C3;margin-top:8px}
+
+  section{padding:64px 0}
+  .kicker{color:var(--steel);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase;margin-bottom:12px}
+  h2{color:var(--navy);font-size:28px;font-weight:700;margin-bottom:14px}
+  .sub{color:#52606D;margin-bottom:40px}
+
+  .prod-section{margin-bottom:56px;padding-bottom:56px;border-bottom:1px solid var(--line)}
+  .prod-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+  .prod-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:32px}
+  .prod-head .ph{height:260px;background:#E4E9EF;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#8B98A8;font-size:13px;font-weight:600;letter-spacing:1px}
+  .prod-head h3{font-size:24px;color:var(--navy);margin-bottom:10px}
+  .prod-head p{color:#52606D;margin-bottom:16px}
+
+  table.spec{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:14.5px;margin-bottom:20px}
+  table.spec th{background:var(--navy);color:#fff;text-align:left;padding:12px 18px;font-size:13px}
+  table.spec td{padding:11px 18px;border-top:1px solid #EDF1F4;color:#52606D}
+  table.spec td:last-child{text-align:right;font-weight:600;color:var(--ink)}
+
+  .faq{margin-top:24px}
+  .faq-item{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-bottom:12px}
+  .faq-item b{display:block;color:var(--navy);font-size:15px;margin-bottom:6px}
+  .faq-item p{color:#52606D;font-size:14px}
+
+  .cta{background:var(--navy);padding:48px 0;text-align:center}
+  .cta h2{color:#fff;font-size:26px;font-weight:700;margin-bottom:10px}
+  .cta p{color:#9FB0C3;margin-bottom:20px}
+  .cta .btn-quote{padding:14px 36px;font-size:16px}
+
+  footer{background:var(--navy);color:#9FB0C3;padding:56px 0 0;font-size:14px;border-top:1px solid #1E3350}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px;padding-bottom:42px}
+  footer h4{color:#fff;margin-bottom:16px;font-size:14px;letter-spacing:.5px}
+  footer li{list-style:none;margin-bottom:9px}
+  footer a{color:#9FB0C3;text-decoration:none}
+  footer a:hover{color:#fff}
+  .copy{border-top:1px solid #1E3350;padding:20px 0;text-align:center;font-size:13px;color:#7A8CA0}
+
+  @media(max-width:960px){
+    .menu-toggle{display:block}
+    nav{position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:12px 24px;display:none}
+    nav.open{display:flex}
+    nav a{padding:12px 0;border-bottom:1px solid var(--line);width:100%}
+    nav a:last-child{border-bottom:none}
+    .prod-head{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Established 2017 · Jiaxing, Zhejiang, China · <b>sales@tpmetalfab.com</b></span>
+  <span>WhatsApp: [YOUR NUMBER]</span>
+</div></div>
+
+<header><div class="wrap head">
+  <a href="index.html" class="logo"><div class="logo-mark"></div><div class="logo-txt"><b>TOPWELL PRECISION</b><small>SHEET METAL FABRICATION</small></div></a>
+  <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="capabilities.html">Capabilities</a>
+    <a href="products.html">Products</a>
+    <a href="quality.html">Quality</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>Product Families</h1>
+  <p>Four lines, each with materials, finishes and lead times</p>
+</div></div>
+
+<section><div class="wrap">
+
+  <div class="prod-section">
+    <div class="prod-head">
+      <div class="ph">YOUR PHOTO — ENCLOSURES & CABINETS</div>
+      <div>
+        <div class="kicker">Product Line 01</div>
+        <h3>Enclosures &amp; Cabinets</h3>
+        <p>Electrical enclosures, server cabinets, control panels and outdoor-rated housings. Built to IP54 / IP65 with EMI shielding options.</p>
+        <a href="contact.html" class="btn-quote">Request Quote</a>
+      </div>
+    </div>
+    <table class="spec">
+      <tr><th>Property</th><th>Details</th></tr>
+      <tr><td>Materials</td><td>SPCC · SUS304 · SUS316 · AL5052 · AL6061</td></tr>
+      <tr><td>Thickness</td><td>0.8 – 3.0 mm</td></tr>
+      <tr><td>Finishes</td><td>Powder coat (RAL full range) · Anodize · Zinc plate · E-coat</td></tr>
+      <tr><td>IP Rating</td><td>IP54 standard · IP65 optional</td></tr>
+      <tr><td>Lead time</td><td>15 – 25 days</td></tr>
+    </table>
+    <div class="faq">
+      <div class="faq-item"><b>Can you add cable glands and ventilation?</b><p>Yes. We can install gland plates, fans, filters and cable entry panels per your layout drawing.</p></div>
+      <div class="faq-item"><b>Do you provide silkscreen or laser marking?</b><p>Yes. Both silkscreen printing and laser engraving are available for labels, warnings and logos.</p></div>
+    </div>
+  </div>
+
+  <div class="prod-section">
+    <div class="prod-head">
+      <div>
+        <div class="kicker">Product Line 02</div>
+        <h3>Boxes &amp; Panels</h3>
+        <p>Junction boxes, distribution panels, DIN-rail housings and wall-mount control boxes. Standard and custom sizes.</p>
+        <a href="contact.html" class="btn-quote">Request Quote</a>
+      </div>
+      <div class="ph">YOUR PHOTO — BOXES & PANELS</div>
+    </div>
+    <table class="spec">
+      <tr><th>Property</th><th>Details</th></tr>
+      <tr><td>Materials</td><td>SPCC · SUS316 · AL5052</td></tr>
+      <tr><td>Thickness</td><td>1.0 – 2.5 mm</td></tr>
+      <tr><td>Mounting</td><td>Wall · Pole · Floor mount</td></tr>
+      <tr><td>Features</td><td>DIN rail pre-installed · Gland plates · Locking options</td></tr>
+      <tr><td>Lead time</td><td>12 – 20 days</td></tr>
+    </table>
+  </div>
+
+  <div class="prod-section">
+    <div class="prod-head">
+      <div class="ph">YOUR PHOTO — BRACKETS & FRAMES</div>
+      <div>
+        <div class="kicker">Product Line 03</div>
+        <h3>Brackets &amp; Frames</h3>
+        <p>Structural brackets, mounting frames, machine bases and OEM assemblies. Tube laser up to 240×240 mm for one-piece construction.</p>
+        <a href="contact.html" class="btn-quote">Request Quote</a>
+      </div>
+    </div>
+    <table class="spec">
+      <tr><th>Property</th><th>Details</th></tr>
+      <tr><td>Materials</td><td>S235 · SUS304 · AL6061</td></tr>
+      <tr><td>Thickness</td><td>1.5 – 100 mm (sheet and tube)</td></tr>
+      <tr><td>Tube laser</td><td>≤ 240×240 mm structural tube</td></tr>
+      <tr><td>Finishes</td><td>Zinc plate · E-coat · Powder coat</td></tr>
+      <tr><td>Lead time</td><td>15 – 30 days</td></tr>
+    </table>
+  </div>
+
+  <div class="prod-section">
+    <div class="prod-head">
+      <div>
+        <div class="kicker">Product Line 04</div>
+        <h3>Shelves &amp; Racks</h3>
+        <p>Industrial shelving, modular rack systems, display racks and storage units. Flat-pack or fully welded.</p>
+        <a href="contact.html" class="btn-quote">Request Quote</a>
+      </div>
+      <div class="ph">YOUR PHOTO — SHELVES & RACKS</div>
+    </div>
+    <table class="spec">
+      <tr><th>Property</th><th>Details</th></tr>
+      <tr><td>Materials</td><td>SPCC · SUS304</td></tr>
+      <tr><td>Thickness</td><td>0.8 – 2.0 mm</td></tr>
+      <tr><td>Finishes</td><td>Powder coat (high-gloss or textured) · Zinc plate</td></tr>
+      <tr><td>Assembly</td><td>Flat-pack (bolted) or welded</td></tr>
+      <tr><td>Lead time</td><td>15 – 25 days</td></tr>
+    </table>
+  </div>
+
+</div></section>
+
+<div class="cta"><div class="wrap">
+  <h2>Need something not listed?</h2>
+  <p>Send your drawing — if we can make it, we will quote it. If not, we will tell you honestly.</p>
+  <a href="contact.html" class="btn-quote">Get a Quote</a>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="index.html" class="logo"><div class="logo-mark"></div><div class="logo-txt"><b style="color:#fff">TOPWELL PRECISION</b><small>SHEET METAL FABRICATION</small></div></a>
+      <p style="font-size:13.5px;margin-top:12px">Jiaxing Topwell Precision Machinery Co., LTD.</p></div>
+    <div><h4>Products</h4><ul><li><a href="products.html">Enclosures</a></li><li><a href="products.html">Boxes</a></li><li><a href="products.html">Brackets</a></li><li><a href="products.html">Racks</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="capabilities.html">Capabilities</a></li><li><a href="quality.html">Quality</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>sales@tpmetalfab.com</li><li>WhatsApp: [YOUR NUMBER]</li><li>Jiaxing, China</li></ul></div>
+  </div>
+  <div class="copy">© 2026 Jiaxing Topwell Precision Machinery Co., LTD</div>
+</div></footer>
+
+</body>
+</html>

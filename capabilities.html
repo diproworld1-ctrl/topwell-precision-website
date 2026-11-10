@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capabilities & Tolerances | Topwell Precision</title>
+<style>
+  :root{--navy:#12263F;--orange:#C2410C;--steel:#3A6EA5;--bg:#F3F5F7;--ink:#1F2933;--line:#D9DEE3}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter','Segoe UI',Arial,sans-serif}
+  body{color:var(--ink);background:#fff;font-size:16px;line-height:1.6}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+  .topbar{background:var(--navy);color:#B7C4D4;font-size:13.5px;padding:9px 0}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .topbar b{color:#fff;font-weight:600}
+
+  header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .head{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .logo-mark{width:38px;height:38px;background:var(--navy);border-radius:6px;position:relative}
+  .logo-mark::after{content:"";position:absolute;inset:8px;border:2.5px solid var(--orange);border-top:none;border-right:none;border-radius:2px}
+  .logo-txt b{font-size:18px;letter-spacing:.3px;display:block;line-height:1.15;color:var(--navy);font-weight:700}
+  .logo-txt small{color:#7A8794;font-size:10.5px;letter-spacing:1.8px;font-weight:600}
+
+  nav{display:flex;align-items:center;gap:30px}
+  nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+  nav a:hover{color:var(--steel)}
+  .btn-quote{background:var(--orange);color:#fff;border:none;padding:12px 26px;font-weight:700;font-size:15px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn-quote:hover{background:#9A3409}
+  .menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--navy)}
+
+  .page-head{background:var(--navy);color:#fff;padding:56px 0;text-align:center}
+  .page-head h1{font-size:34px;font-weight:700}
+  .page-head p{color:#9FB0C3;margin-top:8px}
+
+  section{padding:64px 0}
+  .kicker{color:var(--steel);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase;margin-bottom:12px}
+  h2{color:var(--navy);font-size:28px;font-weight:700;margin-bottom:14px}
+  .sub{color:#52606D;margin-bottom:40px}
+
+  .cap-item{display:grid;grid-template-columns:120px 1fr;gap:28px;align-items:start;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+  .cap-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+  .cap-icon{width:80px;height:80px;border-radius:8px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--steel);font-size:32px;font-weight:700}
+  .cap-item h3{font-size:20px;color:var(--navy);margin-bottom:8px}
+  .cap-item p{color:#52606D;margin-bottom:12px}
+  .cap-specs{display:flex;gap:18px;flex-wrap:wrap}
+  .cap-spec{background:var(--bg);padding:8px 16px;border-radius:6px;font-size:13px;font-weight:600;color:var(--ink)}
+
+  table.spec{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:14.5px;margin-top:16px}
+  table.spec th{background:var(--navy);color:#fff;text-align:left;padding:12px 18px;font-size:13px}
+  table.spec td{padding:11px 18px;border-top:1px solid #EDF1F4;color:#52606D}
+  table.spec td:last-child{text-align:right;font-weight:600;color:var(--ink)}
+
+  .materials{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  .mat{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:18px}
+  .mat b{display:block;color:var(--navy);font-size:15px;margin-bottom:4px}
+  .mat span{color:#52606D;font-size:13px}
+
+  .cta{background:var(--navy);padding:48px 0;text-align:center}
+  .cta h2{color:#fff;font-size:26px;font-weight:700;margin-bottom:10px}
+  .cta p{color:#9FB0C3;margin-bottom:20px}
+  .cta .btn-quote{padding:14px 36px;font-size:16px}
+
+  footer{background:var(--navy);color:#9FB0C3;padding:56px 0 0;font-size:14px;border-top:1px solid #1E3350}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px;padding-bottom:42px}
+  footer h4{color:#fff;margin-bottom:16px;font-size:14px;letter-spacing:.5px}
+  footer li{list-style:none;margin-bottom:9px}
+  footer a{color:#9FB0C3;text-decoration:none}
+  footer a:hover{color:#fff}
+  .copy{border-top:1px solid #1E3350;padding:20px 0;text-align:center;font-size:13px;color:#7A8CA0}
+
+  @media(max-width:960px){
+    .menu-toggle{display:block}
+    nav{position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:12px 24px;display:none}
+    nav.open{display:flex}
+    nav a{padding:12px 0;border-bottom:1px solid var(--line);width:100%}
+    nav a:last-child{border-bottom:none}
+    .cap-item{grid-template-columns:1fr}
+    .materials{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Established 2017 · Jiaxing, Zhejiang, China · <b>sales@tpmetalfab.com</b></span>
+  <span>WhatsApp: [YOUR NUMBER]</span>
+</div></div>
+
+<header><div class="wrap head">
+  <a href="index.html" class="logo"><div class="logo-mark"></div><div class="logo-txt"><b>TOPWELL PRECISION</b><small>SHEET METAL FABRICATION</small></div></a>
+  <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="capabilities.html">Capabilities</a>
+    <a href="products.html">Products</a>
+    <a href="quality.html">Quality</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>Capabilities & Tolerances</h1>
+  <p>Full in-house chain — from laser cutting to assembly</p>
+</div></div>
+
+<section><div class="wrap">
+  <div class="kicker">Equipment</div>
+  <h2>What we can make</h2>
+  <p class="sub">Seven process steps under one roof. No outsourcing means faster lead times and one accountable quality standard.</p>
+
+  <div class="cap-item">
+    <div class="cap-icon">LC</div>
+    <div>
+      <h3>Laser Cutting</h3>
+      <p>Fiber laser cutting for flat sheet with clean edge quality and tight tolerances. Suitable for prototypes and high-volume production.</p>
+      <div class="cap-specs"><span class="cap-spec">0.05–100 mm sheet</span><span class="cap-spec">±0.1 mm tolerance</span><span class="cap-spec">SPCC / SUS / AL</span></div>
+    </div>
+  </div>
+
+  <div class="cap-item">
+    <div class="cap-icon">TL</div>
+    <div>
+      <h3>Tube / Pipe Laser Cutting</h3>
+      <p>3D cutting of structural tube and pipe profiles. Holes, miters, slots and profiles in a single pass — no drilling or sawing needed.</p>
+      <div class="cap-specs"><span class="cap-spec">≤240×240 mm</span><span class="cap-spec">Round / square / rectangle</span><span class="cap-spec">Miter cuts</span></div>
+    </div>
+  </div>
+
+  <div class="cap-item">
+    <div class="cap-icon">BR</div>
+    <div>
+      <h3>CNC Bending</h3>
+      <p>Press-brake forming with CNC back-gauge control. Repeatable angles for brackets, panels, enclosures and frames.</p>
+      <div class="cap-specs"><span class="cap-spec">±0.5° angle</span><span class="cap-spec">±0.1 mm repeat</span><span class="cap-spec">Fixture controlled</span></div>
+    </div>
+  </div>
+
+  <div class="cap-item">
+    <div class="cap-icon">WD</div>
+    <div>
+      <h3>Welding</h3>
+      <p>TIG and MIG welding by certified operators. Fixture-built to control distortion. Suitable for frames, cabinets and structural parts.</p>
+      <div class="cap-specs"><span class="cap-spec">TIG / MIG</span><span class="cap-spec">Certified welders</span><span class="cap-spec">Leak-test ready</span></div>
+    </div>
+  </div>
+
+  <div class="cap-item">
+    <div class="cap-icon">PL</div>
+    <div>
+      <h3>Polishing</h3>
+      <p>Grinding and finishing from functional deburring to mirror-grade surfaces. Consistent Ra values across batches.</p>
+      <div class="cap-specs"><span class="cap-spec">Ra 0.8–3.2 standard</span><span class="cap-spec">Deburr all edges</span><span class="cap-spec">Mirror on request</span></div>
+    </div>
+  </div>
+
+  <div class="cap-item">
+    <div class="cap-icon">ST</div>
+    <div>
+      <h3>Surface Treatment</h3>
+      <p>Powder coating, anodizing, zinc plating and e-coating through vetted partners, managed in-house with inspection.</p>
+      <div class="cap-specs"><span class="cap-spec">60–120 μm coating</span><span class="cap-spec">RAL full range</span><span class="cap-spec">500h salt-spray opt.</span></div>
+    </div>
+  </div>
+
+  <div class="cap-item">
+    <div class="cap-icon">AS</div>
+    <div>
+      <h3>Assembly</h3>
+      <p>Hardware installation, sub-assembly and full product assembly before packing. Torque-controlled fastening where required.</p>
+      <div class="cap-specs"><span class="cap-spec">Hardware installed</span><span class="cap-spec">Sub / full assembly</span><span class="cap-spec">Torque controlled</span></div>
+    </div>
+  </div>
+
+  <div class="kicker" style="margin-top:48px">Tolerance Table</div>
+  <h2>Published tolerances</h2>
+  <table class="spec">
+    <tr><th>Specification</th><th>Standard</th></tr>
+    <tr><td>Linear cutting tolerance</td><td>±0.1 mm</td></tr>
+    <tr><td>Bend angle tolerance</td><td>±0.5°</td></tr>
+    <tr><td>Bend repeatability</td><td>±0.1 mm</td></tr>
+    <tr><td>Surface finish (standard)</td><td>Ra 0.8 μm</td></tr>
+    <tr><td>Coating thickness</td><td>60–120 μm</td></tr>
+    <tr><td>First article inspection</td><td>100% dimensional</td></tr>
+    <tr><td>Material traceability</td><td>Full certs on request</td></tr>
+  </table>
+
+  <div class="kicker" style="margin-top:48px">Materials</div>
+  <h2>Materials we work with</h2>
+  <div class="materials">
+    <div class="mat"><b>Carbon Steel</b><span>SPCC, SPCD, SPCE, S235, Q235 — sheet and plate</span></div>
+    <div class="mat"><b>Stainless Steel</b><span>SUS304, SUS316, SUS430 — corrosion resistant</span></div>
+    <div class="mat"><b>Aluminum</b><span>AL5052, AL6061, AL6063 — lightweight, anodize-ready</span></div>
+  </div>
+</div></section>
+
+<div class="cta"><div class="wrap">
+  <h2>Need a custom capability?</h2>
+  <p>Tell us your drawing — we will tell you if we can make it, and how.</p>
+  <a href="contact.html" class="btn-quote">Get a Quote</a>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="index.html" class="logo"><div class="logo-mark"></div><div class="logo-txt"><b style="color:#fff">TOPWELL PRECISION</b><small>SHEET METAL FABRICATION</small></div></a>
+      <p style="font-size:13.5px;margin-top:12px">Jiaxing Topwell Precision Machinery Co., LTD.</p></div>
+    <div><h4>Products</h4><ul><li><a href="products.html">Enclosures</a></li><li><a href="products.html">Boxes</a></li><li><a href="products.html">Brackets</a></li><li><a href="products.html">Racks</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="capabilities.html">Capabilities</a></li><li><a href="quality.html">Quality</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>sales@tpmetalfab.com</li><li>WhatsApp: [YOUR NUMBER]</li><li>Jiaxing, China</li></ul></div>
+  </div>
+  <div class="copy">© 2026 Jiaxing Topwell Precision Machinery Co., LTD</div>
+</div></footer>
+
+</body>
+</html>
