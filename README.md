@@ -3,6 +3,8 @@
 Clean industrial B2B website for Jiaxing Topwell Precision Machinery Co., LTD.
 Sheet metal fabrication: tube laser, bending, welding, assembly.
 
+**Live site:** https://diproworld1-ctrl.github.io/topwell-precision-website/
+
 ## Pages
 
 - **index.html** — Homepage (hero, capabilities, products, process, quality, why us, CTA)
@@ -20,23 +22,27 @@ Sheet metal fabrication: tube laser, bending, welding, assembly.
 - White / light gray `#F3F5F7` — backgrounds
 - Charcoal `#1F2933` — body text
 
+## Contact details (already filled in)
+
+- **Email:** info@tpmetalfab.com
+- **WhatsApp:** +8613586358903
+- **Location:** Jiaxing, Zhejiang, China
+
 ## Before going live
 
-1. Replace `[YOUR NUMBER]` with your real WhatsApp number (all 6 files)
-2. Replace `YOUR_FORM_ID` in contact.html with your Formspree form ID
-3. Replace all `YOUR PHOTO` placeholders with real factory photos
-4. Replace certification placeholders with real certificate images
-5. Confirm company name is correct (Topwell / Topweier)
+1. Replace `YOUR_FORM_ID` in contact.html with your Formspree form ID
+2. Replace all `YOUR PHOTO` placeholders with real factory photos
+3. Replace certification placeholders with real certificate images
 
 ## Hosting
 
 Free static hosting options:
-- GitHub Pages
+- **GitHub Pages** — Go to repo Settings → Pages → Source: main branch, root folder
 - Netlify (drag & drop at app.netlify.com/drop)
 - Cloudflare Pages
 
 For custom domain: point your DNS CNAME record to the hosting service.
 
-## Contact
+## Designed by Kimi AI
 
-Designed by Kimi AI. For edits, contact your AI assistant.
+For edits, contact your AI assistant.
